@@ -8,7 +8,6 @@ document.addEventListener('readystatechange', (state)=>{
 		let button = document.getElementsByClassName('btn-success')[0]
 		button.addEventListener('click', ()=>{
 			let next = checkImg(file)
-			console.log(next)
 			if(next)
 				codeImg(file)
 			else
@@ -30,7 +29,11 @@ function codeImg(file) {
 }
 
 function checkImg(file) {
-	let ext = file.name.toLowerCase() || ''
+	if(!file){
+		alert('请选择文件。。。')
+		return false
+	}
+	let ext = file.name.split('.')[1].toLowerCase() || ''
 	let size = file.size
 	if(ext != 'jpg' && ext != 'png' && ext != 'jpeg' && ext != 'gif'){
 		alert('只能输入jpg，png，jpeg，gif格式')
@@ -38,5 +41,7 @@ function checkImg(file) {
 	}
 	if(size>(8*1024)){
 		alert('图片大小不超过8KB')
+		return false
 	}
+	return true
 }
