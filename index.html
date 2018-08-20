@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>img-to-base64</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<style>
+			input:-webkit-autofill {
+			    -webkit-box-shadow: 0 0 0px 1000px white inset;
+			}
+			.container{
+				padding-top: 45px;
+			}
+			.card{
+				margin-top: 40px !important;
+			}
+		</style>
+		<script src='./dist/main.js'></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+			  <h1 class="display-4">图片转成BASE64位编码</h1>
+			  <p class="lead">上传一张图片，点击立即转码，即可完成BASE64转码</p>
+			  <hr class="my-4">
+			</div>
+			<form>
+				<div class="form-group">
+				    <label for="exampleFormControlFile1">Example file input</label>
+				    <input type="file" class="form-control-file" id="file">
+				 </div>
+				<button type="button" class="btn btn-success">立即转码</button>
+				<div class="card">
+				  <div class="card-body">
+				    <p class="card-text">base64地址</p>
+				  </div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

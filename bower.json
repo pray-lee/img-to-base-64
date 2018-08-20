@@ -1,0 +1,20 @@
+{
+  "name": "img_to_base64",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "pray-lee"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
